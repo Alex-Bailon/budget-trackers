@@ -2,7 +2,11 @@
  
 ## Description
 
-Budget-tracker allows the user to be able to keep track of expenses both on- and offline. Using a mongobd expenses are stored in database and chart is updated when the user is online. If the user is offline and has no network the expenses are stored in a indexedDB. When the user gains an network connection the mongobd is updated based off the informtion that was stored in the indexedDB.
+Budget-tracker allows the user to be able to keep track of expenses both on- and offline. Using a mongobd expenses are stored in database and chart is updated when the user is online. If the user is offline and has no network the expenses are stored in a indexedDB. When the user gains an network connection the mongobd is updated based off the informtion that was stored in the indexedDB. To have the app be operational the following tools were used: 
+* Express
+* Mongoose
+* Morgan
+* Compression
 
 ## Installation/Usage
 
@@ -13,6 +17,7 @@ Please ensure to do the following in terminal:
 
 A deployed version of the app can be found [here](https://vast-chamber-38546.herokuapp.com/)  
 Below is a screenshot of the working app  
+![budget-tracker homepage](./budget-tracker.png)  
 
 
 ## License
