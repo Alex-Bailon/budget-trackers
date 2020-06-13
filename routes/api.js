@@ -1,5 +1,10 @@
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
+const path = require("path")
+
+router.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/index.html'))
+})
 
 router.post("/api/transaction", ({body}, res) => {
   Transaction.create(body)
@@ -31,8 +36,5 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
-router.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'))
-})
 
 module.exports = router;
