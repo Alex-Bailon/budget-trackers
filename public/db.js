@@ -1,6 +1,6 @@
 let db;
 // create a new db request for a "budget" database.
-const request = indexedDB.open("budget", 1);
+const request = indexedDB.open("budget", 2);
 
 request.onupgradeneeded = function(event) {
    // create object store called "pending" and set autoIncrement to true
@@ -54,7 +54,7 @@ function checkDatabase() {
       .then(() => {
         // if successful, open a transaction on your pending db
         const transaction = db.transaction(["pending"], "readwrite");
-
+        console.log('db')
         // access your pending object store
         const store = transaction.objectStore("pending");
 
